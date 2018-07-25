@@ -1,7 +1,7 @@
 package com.company;
 
 /*
-Коротко о моём отношении к работе.
+Таблица умножения.
  */
 public class Task0314 {
 
