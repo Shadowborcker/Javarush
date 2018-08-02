@@ -36,13 +36,25 @@ public class Task0728 {
     }
 
     public static void sort(int[] array) {
-        Arrays.sort(array);
+        for (int i = array.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (array[j] > array[j + 1]) {
+                    int tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+                }
+            }
+        }
         int[] newarray = new int[20];
         for (int i = 0; i < 20; i++) {
-            newarray[i] = array[19-i];
+            newarray[i] = array[19 - i];
         }
-        for (int i = 0; i < 20; i++) {
-            array[i] = newarray[i];
-        }
+
+        System.arraycopy(newarray, 0, array, 0, 20);
+
     }
+
+
 }
+
+
